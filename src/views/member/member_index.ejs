@@ -1,0 +1,10 @@
+<%- include("./header")%>
+<% console.log(list)%>
+<% list.forEach ((member)=>{%>
+    ID : <%= member.ID %><br>
+    PW : <%= member.PWD %><br>
+    ADDR : <%= member.ADDR %><br>
+    <!--NAME : <a href="/member/member_view?id=<%= member.ID %>"><%= member.NAME %></a>-->
+    NAME : <a href="/member/member_view/<%= member.ID %>"><%= member.NAME %></a><hr>
+<%})%>
+<a href="/member/register_form">데이터 추가</a>
